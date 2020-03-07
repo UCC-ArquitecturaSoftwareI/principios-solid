@@ -1,8 +1,4 @@
-//
-// Created by martin on 6/3/20.
-//
-
-#include "ball_raylib.h"
+#include "ball.h"
 
 Ball::Ball(float x, float y, float velX, float velY) : x(x), y(y), vel_x(velX), vel_y(velY) {
     radius = 5;
@@ -21,7 +17,6 @@ void Ball::move(int wWith, int wHeight, int beginX, int beginY, float t) {
     } else if (x + radius > beginX + wWith) { // right side
         vel_x *= -1;
         x = (beginX + wWith) - radius;
-
     } else if (y - radius < beginY) { // left side
         vel_y *= -1;
         y = beginY + radius;
@@ -32,7 +27,15 @@ void Ball::move(int wWith, int wHeight, int beginX, int beginY, float t) {
 
 }
 
-void Ball::draw() {
-    Vector2 ballPosition = {x,y};
-    DrawCircleV(ballPosition, radius, RED);
+
+float Ball::getX() const {
+    return x;
+}
+
+float Ball::getY() const {
+    return y;
+}
+
+float Ball::getRadius() {
+    return radius;
 }

@@ -5,7 +5,7 @@
 #include <list>
 #include <sstream>
 
-#include "ball.h"
+#include "ball_sfml.h"
 
 int main() {
     // Constant windows data

@@ -1,13 +1,11 @@
-#include "ball.h"
+//
+// Created by martin on 6/3/20.
+//
+
+#include "ball_raylib.h"
 
 Ball::Ball(float x, float y, float velX, float velY) : x(x), y(y), vel_x(velX), vel_y(velY) {
     radius = 5;
-    circle.setRadius(radius);
-    circle.setOutlineThickness(0);
-    circle.setOutlineColor(sf::Color::Black);
-    circle.setFillColor(sf::Color::Red);
-    circle.setOrigin(radius, radius);
-    circle.setPosition(x, y);
 }
 
 void Ball::move(int wWith, int wHeight, int beginX, int beginY, float t) {
@@ -23,6 +21,7 @@ void Ball::move(int wWith, int wHeight, int beginX, int beginY, float t) {
     } else if (x + radius > beginX + wWith) { // right side
         vel_x *= -1;
         x = (beginX + wWith) - radius;
+
     } else if (y - radius < beginY) { // left side
         vel_y *= -1;
         y = beginY + radius;
@@ -30,9 +29,11 @@ void Ball::move(int wWith, int wHeight, int beginX, int beginY, float t) {
         vel_y *= -1;
         y = (beginY + wHeight) - radius;
     }
-    circle.setPosition(x,y);
+
 }
 
-void Ball::draw(sf::RenderWindow *w) {
-    w->draw(circle);
+
+void Ball::draw() {
+    Vector2 ballPosition = {x,y};
+    DrawCircleV(ballPosition, radius, RED);
 }

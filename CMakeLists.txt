@@ -19,7 +19,7 @@ target_link_libraries(SOLID_problem_raylib raylib)
 
 
 # good SFML example
-add_executable(SOLID_good_sfml SRP/solution/main_sfml.cpp SRP/solution/ball.cpp SRP/solution/render_manager.cpp)
+add_executable(SOLID_good_sfml SRP/solution/main_sfml.cpp SRP/solution/ball.cpp SRP/solution/render_manager_sfml.cpp)
 target_link_libraries(SOLID_good_sfml sfml-system sfml-window sfml-graphics)
 
 # good RayLib example

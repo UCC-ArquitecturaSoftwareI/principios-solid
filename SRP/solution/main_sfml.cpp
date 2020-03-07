@@ -12,7 +12,7 @@
 #include <sstream>
 
 #include "ball.h"
-#include "render_manager.h"
+#include "render_manager_sfml.h"
 
 int main() {
     // Constant windows data

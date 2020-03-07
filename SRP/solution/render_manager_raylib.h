@@ -7,8 +7,8 @@
 #include "raylib.h"
 #include "ball.h"
 
-#ifndef SOLID_DRAW_MANAGER_H
-#define SOLID_DRAW_MANAGER_H
+#ifndef SOLID_RENDER_MANAGER_RAYLIB_H
+#define SOLID_RENDER_MANAGER_RAYLIB_H
 
 
 class render_manager {
@@ -19,4 +19,4 @@ public:
 };
 
 
-#endif //SOLID_DRAW_MANAGER_H
+#endif

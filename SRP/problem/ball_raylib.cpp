@@ -1,7 +1,9 @@
-//
-// Created by martin on 6/3/20.
-//
+/**
+    Example of ball implementation for raylib without following SRP principle.
 
+    @author Marcucci, Ricardo Martin
+    @version 0.1 2020-03-07
+ */
 #include "ball_raylib.h"
 
 Ball::Ball(float x, float y, float velX, float velY) : x(x), y(y), vel_x(velX), vel_y(velY) {
@@ -32,8 +34,7 @@ void Ball::move(int wWith, int wHeight, int beginX, int beginY, float t) {
 
 }
 
-
 void Ball::draw() {
-    Vector2 ballPosition = {x,y};
+    Vector2 ballPosition = {x, y};
     DrawCircleV(ballPosition, radius, RED);
 }

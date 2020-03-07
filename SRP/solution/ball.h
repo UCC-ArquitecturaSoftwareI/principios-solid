@@ -1,17 +1,17 @@
-//
-// Created by martin on 6/3/20.
-//
-#include <SFML/Graphics.hpp>
+/**
+    Example of ball implementation following SRP principle.
 
+    @author Marcucci, Ricardo Martin
+    @version 0.1 2020-03-07
+ */
+#include <SFML/Graphics.hpp>
 
 #ifndef SOLID_BALL_GOOD_H
 #define SOLID_BALL_GOOD_H
 
-
 class Ball {
     float x, y;
     float radius, vel_x, vel_y;
-
 
 public:
     Ball(float x, float y, float velX, float velY);

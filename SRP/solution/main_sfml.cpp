@@ -1,3 +1,9 @@
+/**
+    Example program for SFML following SRP principle.
+
+    @author Marcucci, Ricardo Martin
+    @version 0.1 2020-03-07
+*/
 #include <SFML/Graphics.hpp>
 #include <random>
 #include <functional>
@@ -54,11 +60,11 @@ int main() {
                        event.mouseButton.button == sf::Mouse::Left) {
                 auto p = sf::Mouse::getPosition(window);
                 for (int i = 0; i < 100; i++)
-                entities.push_back(new Ball(
-                        p.x,
-                        p.y,
-                        (random() - w_width / 2.0),
-                        (random() - w_width / 2.0)));
+                    entities.push_back(new Ball(
+                            p.x,
+                            p.y,
+                            (random() - w_width / 2.0),
+                            (random() - w_width / 2.0)));
             }
         }
 

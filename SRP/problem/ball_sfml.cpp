@@ -1,3 +1,9 @@
+/**
+    Example of ball implementation for sfml without following SRP principle.
+
+    @author Marcucci, Ricardo Martin
+    @version 0.1 2020-03-07
+*/
 #include "ball_sfml.h"
 
 Ball::Ball(float x, float y, float velX, float velY) : x(x), y(y), vel_x(velX), vel_y(velY) {
@@ -30,7 +36,7 @@ void Ball::move(int wWith, int wHeight, int beginX, int beginY, float t) {
         vel_y *= -1;
         y = (beginY + wHeight) - radius;
     }
-    circle.setPosition(x,y);
+    circle.setPosition(x, y);
 }
 
 void Ball::draw(sf::RenderWindow *w) {

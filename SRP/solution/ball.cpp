@@ -1,3 +1,9 @@
+/**
+    Example of ball implementation following SRP principle.
+
+    @author Marcucci, Ricardo Martin
+    @version 0.1 2020-03-07
+ */
 #include "ball.h"
 
 Ball::Ball(float x, float y, float velX, float velY) : x(x), y(y), vel_x(velX), vel_y(velY) {
